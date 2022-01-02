@@ -202,3 +202,27 @@ Global Classes
 .item p {
   margin-bottom: 0;
 }
+
+/* counter */
+
+.section_counter {
+  margin: 4rem 0;
+  background-color: lightgrey;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.section_counter-complex {
+  margin: 4rem 0;
+  background-color: rgba(176, 196, 222, 0.493);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.section_counter-complex h2 {
+  color: var(--clr-quinary-2);
+}
+
+.heading_counter {
+  color: var(--clr-tertiary-2);
+}
