@@ -267,6 +267,7 @@ Global Classes
 .users h4 {
   margin-bottom: 0.15rem;
   color: var(--clr-white);
+  text-transform: none;
 }
 
 .users__heading {
