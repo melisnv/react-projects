@@ -127,6 +127,7 @@ p {
   h3,
   h4 {
     line-height: 1;
+    color: var(--clr-white);
   }
 }
 

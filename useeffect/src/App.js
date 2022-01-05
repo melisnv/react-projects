@@ -1,7 +1,8 @@
 import './App.css';
 import UseEffectBasics from './useeffect-basics';
 import UseEffectCleanUp from './useeffect-cleanup';
-import UseEffectFetchData from './useeffect-fetchdata';
+import UseEffectFetchData from './github-users-fetchingdata';
+import UseEffectConditionalRendering from './useeffect-conditional-rendering';
 
 function App() {
   return (
