@@ -15,7 +15,7 @@ function App() {
       setMenuItems(data);
       return;
     }
-    const newItems = menuItems.filter((item) => item.category === category);
+    const newItems = data.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
 
