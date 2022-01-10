@@ -45,3 +45,9 @@ In this project toggle logic has used.
 ### `available at`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Menu Component
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/menu_react%2Fmenu_screen0.jpg?alt=media&token=cc24e83d-2f48-4c0d-84a6-05d76df2a43b)
+
+In this project buttons can render the menu for the choosen category by the user.
