@@ -1,7 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
-const Category = () => {
-  return <h3>Categories Component</h3>;
+const Category = ({ categories, filterItems }) => {
+  return (
+    <div className="btn__container">
+      {categories.map((category, index) => {
+        return (
+          <button
+            type="button"
+            className="filter__btn"
+            key={index}
+            onClick={() => filterItems(category)}
+          >
+            {category}
+          </button>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Category;
