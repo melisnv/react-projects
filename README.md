@@ -51,3 +51,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/menu_react%2Fmenu_screen0.jpg?alt=media&token=cc24e83d-2f48-4c0d-84a6-05d76df2a43b)
 
 In this project buttons can render the menu for the choosen category by the user.
+
+## Mini Portfolio
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/mini-portfolio%2Fmini_portfolio_screens.gif?alt=media&token=ce16dde6-a621-49a7-8f06-efa4be30c2f7)
+
+This project contains small data to display as the user select the company in the resume.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
