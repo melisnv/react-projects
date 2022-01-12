@@ -9,6 +9,7 @@ function App() {
         const { id, title, category, price, img } = item;
         return (
           <article key={id}>
+            <img src={img} alt={title} className="clothes__image" />
             <h3>{title}</h3>
             <h4>{category}</h4>
             <h4>{price}</h4>
