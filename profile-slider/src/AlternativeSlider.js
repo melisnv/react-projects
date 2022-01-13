@@ -7,19 +7,35 @@ function App() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const lastIndex = people.length - 1;
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
-    if (index > lastIndex) {
-      setIndex(0);
-    }
-  }, [index, people]); // will run when the index or people array changes
+  const nextSlide = () => {
+    setIndex((oldIndex) => {
+      let index = oldIndex + 1;
+      if (index > people.length - 1) {
+        index = 0;
+      }
+      return index;
+    });
+  };
+
+  const previousSlide = () => {
+    setIndex((oldIndex) => {
+      let index = oldIndex - 1;
+      if (index < 0) {
+        index = people.length - 1;
+      }
+      return index;
+    });
+  };
 
   useEffect(() => {
     let slider = setInterval(() => {
-      setIndex(index + 1);
+      setIndex((oldIndex) => {
+        let index = oldIndex + 1;
+        if (index > people.length - 1) {
+          index = 0;
+        }
+        return index;
+      });
     }, 3000);
     return () => clearInterval(slider);
   }, [index]);
@@ -59,10 +75,10 @@ function App() {
             </article>
           );
         })}
-        <button className="btn__prev" onClick={() => setIndex(index - 1)}>
+        <button className="btn__prev" onClick={previousSlide}>
           <FiChevronLeft />
         </button>
-        <button className="btn__next" onClick={() => setIndex(index + 1)}>
+        <button className="btn__next" onClick={nextSlide}>
           <FiChevronRight />
         </button>
       </div>

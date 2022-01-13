@@ -172,7 +172,7 @@ Review Profiles
 }
 
 .person__quote {
-  max-width: 35em;
+  /*max-width: 35em;*/
   margin-bottom: 0 auto;
   margin-top: 2rem;
   line-height: 2;
@@ -216,9 +216,6 @@ Review Profiles
 }
 
 @media (min-width: 800px) {
-  .person__quote {
-    max-width: 45em;
-  }
   .btn__prev,
   .btn__next {
     width: 2rem;
@@ -233,7 +230,7 @@ article {
   left: 0;
   width: 100%;
   height: 100%;
-  /*opacity: 0;*/
+  opacity: 0;
   transition: var(--transition);
 }
 
