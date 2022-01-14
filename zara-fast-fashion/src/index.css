@@ -193,6 +193,7 @@ Catalog
 .catalog__item-price {
   color: var(--clr-black);
   font-family: DidotBold;
+  padding-left: 2rem;
 }
 
 .catalog__item-text {
