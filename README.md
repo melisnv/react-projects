@@ -71,3 +71,13 @@ In this project slider logic was implemented with useState() and useEffect().
 ### `available at`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Zara Website Trends Component
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Clothing%2Fzara_screen_gif.gif?alt=media&token=11d867c4-d5c3-478f-af7f-081ae72caa23)
+
+I practiced this project in order to test my knowledge about the information I learned until this stage. Zara's website is one of my favorite minimal websites. That is the reason why I have chosen it to get inspiration from. I practiced the logic that I applied before in which the buttons can render the menu with the category chosen by the user. Data is collected by me. Photos were taken from pinterest and information(price,title) taken from Zara.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

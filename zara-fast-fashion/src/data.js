@@ -19,7 +19,7 @@ const data = [
   {
     id: 3,
     title: 'FLORAL MINI DRESS',
-    category: 'chich',
+    category: 'chic',
     price: 35.99,
     img: 'https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Clothing%2Fchic%2F17.jfif?alt=media&token=7e997dfb-b97c-4f78-b1f2-22e1ed0e0ad0',
     desc: 'V-NECK DRESS WITH THIN CROSSED STRAPS. ELASTICATED BACK.',
