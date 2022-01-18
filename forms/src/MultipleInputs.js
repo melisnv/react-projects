@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 const MultipleInputs = () => {
   // new useState as a new object
   const [person, setPerson] = useState({ firstName: '', email: '', job: '' });
-
   const [people, setPeople] = useState([]);
 
   const handleChange = (e) => {
