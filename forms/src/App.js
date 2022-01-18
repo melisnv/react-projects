@@ -1,9 +1,10 @@
 import ControlledInput from './ControlledInputs';
+import MultipleInputs from './MultipleInputs';
 
 function App() {
   return (
     <div className="container">
-      <ControlledInput />
+      <MultipleInputs />
     </div>
   );
 }
