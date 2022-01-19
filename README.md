@@ -81,3 +81,13 @@ I practiced this project in order to test my knowledge about the information I l
 ### `available at`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Random Paragraph Generator
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/generator_screen2.jpg?alt=media&token=416172f0-285d-44c8-9369-db6157662a67)
+
+In this project a the amount of paragraph selected by user generated and form component implemented.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
