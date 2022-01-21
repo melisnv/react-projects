@@ -91,3 +91,17 @@ In this project a the amount of paragraph selected by user generated and form co
 ### `available at`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Color Generator
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/color_generator_screen2.jpg?alt=media&token=f7ad363a-5255-4f96-ae63-00e1ffe776f8)
+
+This project generates shades and tints of the color entered by user as an input. When the color clicked, the hex code copied the clipboard.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Color Values Used From
+
+[values.js](https://github.com/noeldelgado/values.js)
