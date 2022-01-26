@@ -230,7 +230,7 @@ main {
   border-bottom-left-radius: var(--radius);
   border-color: transparent;
   font-size: 0.7rem;
-  font-family: HarmondItalic;
+  font-family: HarmondBold;
   flex: 1 0 auto;
   color: var(--clr-tertiary-2);
 }

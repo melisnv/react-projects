@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 
-const List = ({ items, removeItem }) => {
+const List = ({ items, removeItem, editItem }) => {
   return (
     <div className="todolist__div">
       {items.map((item, index) => {
@@ -10,7 +10,11 @@ const List = ({ items, removeItem }) => {
           <article key={id} className="todo__list-item">
             <p className="list__title">{title}</p>
             <div className="btn__container">
-              <button type="button" className="btn__edit">
+              <button
+                type="button"
+                className="btn__edit"
+                onClick={() => editItem(id)}
+              >
                 <FaEdit />
               </button>
               <button
