@@ -1,0 +1,23 @@
+import React from 'react';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+
+export const links = [
+  { id: 1, url: 'https://www.ing.com/Home.htm', text: 'Home' },
+  { id: 2, url: 'https://www.ing.com/About-us.htm', text: 'About Us' },
+  {
+    id: 3,
+    url: 'https://www.ing.com/Investor-relations.htm',
+    text: 'Investor Relations',
+  },
+  { id: 4, url: 'https://www.ing.com/ING-in-your-area.htm', text: 'Contact' },
+];
+
+export const social = [
+  { id: 1, url: 'https://www.facebook.com/ING/', icon: <FaFacebook /> },
+  {
+    id: 2,
+    url: 'https://www.instagram.com/ingturkiye/',
+    icon: <FaInstagram />,
+  },
+  { id: 3, url: 'https://twitter.com/ING_news', icon: <FaTwitter /> },
+];
