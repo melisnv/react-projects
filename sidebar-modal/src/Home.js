@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa';
 import { AppContext, useGlobalContext } from './context';
 
 const Home = () => {
-  // the custom hook
+  // the custom hook for states
   const { openSidebar, openModal } = useGlobalContext();
   return (
     <main>
