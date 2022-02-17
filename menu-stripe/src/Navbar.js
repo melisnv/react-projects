@@ -7,12 +7,22 @@ const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
 
   const displaySubmenu = (e) => {
-    console.log('hello world');
-    openSubmenu();
+    e.preventDefault();
+    const page = e.target.textContent;
+    const tempBtn = e.target.getBoundingClientRect();
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    const bottom = tempBtn.bottom - 3;
+    openSubmenu(page, { center, bottom });
+  };
+
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains('btn__link')) {
+      closeSubmenu();
+    }
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav__center">
         <div className="nav__header">
           <img src={logo} alt="luna logo" className="nav__logo" />
@@ -37,9 +47,7 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        <button className="btn btn__signin" onMouseOver={displaySubmenu}>
-          Sign in
-        </button>
+        <button className="btn btn__signin">Sign in</button>
       </div>
     </nav>
   );

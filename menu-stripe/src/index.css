@@ -211,12 +211,12 @@ Navbar Buttons
 
 .hero__info h1 {
   text-transform: none;
-  max-width: 500px;
+  max-width: 300px;
   margin-bottom: 2rem;
 }
 
 .hero__info p {
-  max-width: 35em;
+  max-width: 25em;
   line-height: 1.8;
 }
 
@@ -288,11 +288,11 @@ Hero Media Query
   }
 
   .hero__info h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero__info p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
   .hero__images {
     display: block;
@@ -313,7 +313,7 @@ Hero Media Query
 
   .hero__info h1 {
     max-width: 100%;
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .hero__images {
