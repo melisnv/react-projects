@@ -1,0 +1,55 @@
+import React from 'react';
+import { useEffect } from 'react/cjs/react.production.min';
+import { useState } from 'react/cjs/react.production.min';
+import { useFetch } from './useFetch';
+
+const url = 'https://course-api.com/javascript-store-products';
+
+const ReactMemo = () => {
+  const { products } = useFetch(url);
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <h1>Count : {count}</h1>
+      <button className="btn" onClick={() => setCount(count + 1)}>
+        Click
+      </button>
+
+      <BigList products={products} />
+    </>
+  );
+};
+
+const BigList = React.memo(({ products }) => {
+  useEffect(() => {
+    console.log('Big list called');
+  });
+
+  return (
+    <section className="products">
+      {products.map((product) => {
+        return <SingleProduct key={product.id} {...product}></SingleProduct>;
+      })}
+    </section>
+  );
+});
+
+const SingleProduct = ({ fields }) => {
+  useEffect(() => {
+    console.log('Single list called');
+  });
+
+  let { name, price } = fields;
+  price = price / 100;
+  const image = fields.image[0].url;
+  return (
+    <article className="product">
+      <img src={image} alt={name} />
+      <h4>{name}</h4>
+      <p>€{price}</p>
+    </article>
+  );
+};
+
+export default ReactMemo;
