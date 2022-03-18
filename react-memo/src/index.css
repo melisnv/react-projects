@@ -282,13 +282,13 @@ p {
   text-transform: capitalize;
 }
 
-.products {
+.section__products {
   margin: 4rem 0;
   display: grid;
   gap: 2rem;
 }
 @media screen and (min-width: 576px) {
-  .products {
+  .section__products {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
