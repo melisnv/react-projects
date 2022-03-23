@@ -1,8 +1,17 @@
+import React from 'react';
+import Navbar from './Navbar';
+import Submenu from './Submenu';
+import Sidebar from './Sidebar';
+import Main from './Main';
+
 function App() {
   return (
-    <div className="">
-      <h2>Food Hunter</h2>
-    </div>
+    <>
+      <Navbar />
+      <Sidebar />
+      <Main />
+      <Submenu />
+    </>
   );
 }
 
