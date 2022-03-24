@@ -1,29 +1,64 @@
 import React from 'react';
-import { FaCreditCard, FaBook, FaBriefcase } from 'react-icons/fa';
+import {
+  GiMeal,
+  GiHotMeal,
+  GiBowlOfRice,
+  GiFruitBowl,
+  GiIceCreamCone,
+} from 'react-icons/gi';
 
 const sublinks = [
   {
-    page: 'products',
+    page: 'breakfast',
     links: [
-      { label: 'payment', icon: <FaCreditCard />, url: '/products' },
-      { label: 'terminal', icon: <FaCreditCard />, url: '/products' },
-      { label: 'connect', icon: <FaCreditCard />, url: '/products' },
+      { label: 'Breakfast Tray', icon: <GiFruitBowl />, url: '/breakfast' },
+      { label: 'Omelette', icon: <GiFruitBowl />, url: '/breakfast' },
+      { label: 'Pancakes', icon: <GiFruitBowl />, url: '/breakfast' },
     ],
   },
   {
-    page: 'developers',
+    page: 'lunch',
     links: [
-      { label: 'plugins', icon: <FaBook />, url: '/developers' },
-      { label: 'billing', icon: <FaBook />, url: '/developers' },
-      { label: 'libraries', icon: <FaBook />, url: '/developers' },
-      { label: 'help', icon: <FaBook />, url: '/developers' },
+      { label: 'Salads', icon: <GiBowlOfRice />, url: '/lunch' },
+      { label: 'Pasta', icon: <GiBowlOfRice />, url: '/lunch' },
+      { label: 'Crispies', icon: <GiBowlOfRice />, url: '/lunch' },
+      { label: 'Pizza', icon: <GiBowlOfRice />, url: '/lunch' },
     ],
   },
   {
-    page: 'company',
+    page: 'dinner',
     links: [
-      { label: 'about', icon: <FaBriefcase />, url: '/company' },
-      { label: 'customers', icon: <FaBriefcase />, url: '/company' },
+      { label: 'Cafê de Paris ', icon: <GiHotMeal />, url: '/dinner' },
+      {
+        label: 'Seabass Baked on Bamboo ',
+        icon: <GiHotMeal />,
+        url: '/dinner',
+      },
+      {
+        label: 'Lebanese Meat with Humus ',
+        icon: <GiHotMeal />,
+        url: '/dinner',
+      },
+      {
+        label: 'Grilled Norwegian Salmon',
+        icon: <GiHotMeal />,
+        url: '/dinner',
+      },
+    ],
+  },
+  {
+    page: 'dessert',
+    links: [
+      {
+        label: 'White Chocolate Soufflê',
+        icon: <GiIceCreamCone />,
+        url: '/dessert',
+      },
+      {
+        label: 'San Sebastian Cheesecake',
+        icon: <GiIceCreamCone />,
+        url: '/dessert',
+      },
     ],
   },
 ];

@@ -7,6 +7,11 @@ import signin from './images/sign_in.svg';
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
 
+  const displaySubmenu = (e) => {
+    console.log(e.target);
+    openSubmenu();
+  };
+
   return (
     <nav className="nav">
       <div className="nav__center">
@@ -19,13 +24,24 @@ const Navbar = () => {
 
         <ul className="nav__links">
           <li>
-            <button className="btn__link">products</button>
+            <button className="btn__link" onMouseOver={displaySubmenu}>
+              breakfast
+            </button>
           </li>
           <li>
-            <button className="btn__link">developers</button>
+            <button className="btn__link" onMouseOver={displaySubmenu}>
+              lunch
+            </button>
           </li>
           <li>
-            <button className="btn__link">company</button>
+            <button className="btn__link" onMouseOver={displaySubmenu}>
+              dinner
+            </button>
+          </li>
+          <li>
+            <button className="btn__link" onMouseOver={displaySubmenu}>
+              dessert
+            </button>
           </li>
         </ul>
 

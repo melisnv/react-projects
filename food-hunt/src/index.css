@@ -10,7 +10,7 @@
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
-  --radius-2: 50%;
+  --radius-2: 20px;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -227,6 +227,54 @@ p {
   color: var(--color-primary);
 }
 
+@media screen and (max-width: 1000px) {
+  .main__info {
+    position: relative;
+    left: 0;
+  }
+
+  .main__info h1 {
+    text-transform: none;
+    max-width: 500px;
+    margin-bottom: 2px;
+    font-family: PoppinsBold;
+    font-family: 2rem;
+    color: var(--color-primary);
+  }
+
+  .main__info h2 {
+    text-transform: none;
+    font-family: 1.5rem;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    font-family: PoppinsMedium;
+    color: var(--color-secondary);
+  }
+
+  .main__info p {
+    text-transform: none;
+    line-height: 1.8;
+    max-width: 25em;
+    font-family: 0.85rem;
+    margin-bottom: 2px;
+    font-family: PoppinsRegular;
+    color: var(--color-secondary);
+  }
+
+  .btn__main {
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: PoppinsBold;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-2);
+    border: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+}
+
 @media screen and (min-width: 800px) {
   .nav__center {
     display: grid;
@@ -238,7 +286,7 @@ p {
     display: block;
     justify-self: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     height: 100%;
     display: grid;
@@ -268,4 +316,136 @@ p {
     width: 10rem;
     cursor: pointer;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__center {
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+    padding-bottom: 12vh;
+  }
+
+  .main__info h1 {
+    max-width: 100%;
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main__center {
+    padding-bottom: 20vh;
+  }
+}
+
+/* SIDEBAR COMPONENT */
+
+.sidebar__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -1;
+  transition: var(--transition);
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.sidebar__wrapper.show {
+  visibility: visible;
+  z-index: 2;
+  transform: scale(1);
+}
+
+.sidebar {
+  width: 90vw;
+  height: 95vh;
+  max-width: var(--max-width);
+  background-color: var(--color-white-smoke);
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+.close__btn {
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-secondary);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.sidebar__article {
+  margin-bottom: 2rem;
+}
+
+.sidebar__sublinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.25rem;
+}
+
+.sidebar__sublinks a {
+  display: block;
+  color: var(--color-secondary);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  font-family: PoppinsRegular;
+}
+
+.sidebar__sublinks svg {
+  color: var(--color-primary);
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 800px) {
+  .sidebar__wrapper {
+    display: none;
+  }
+}
+
+/* SUBMENU COMPONENT */
+
+.submenu {
+  background: var(--color-white-smoke);
+  box-shadow: var(--dark-shadow);
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  z-index: 3;
+  display: none;
+  padding: 2rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.submenu::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--color-white-smoke);
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submenu.submenu.show {
+  display: block;
+}
+
+.submenu__center {
+  display: grid;
+  gap: 0.25rem 2rem;
 }
