@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from './Main/Navbar';
 import Submenu from './Submenu';
-import Sidebar from './Sidebar';
-import Main from './Main';
+import Sidebar from './Main/Sidebar';
+import Main from './Main/Main';
 
 function App() {
   return (
