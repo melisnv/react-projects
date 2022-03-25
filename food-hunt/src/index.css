@@ -180,13 +180,13 @@ p {
 }
 
 .main__info {
-  position: relative;
-  left: -5rem;
+  margin-top: 4.5rem;
 }
 
 .main__info h1 {
   text-transform: none;
   max-width: 500px;
+  font-size: 3rem;
   margin-bottom: 2px;
   font-family: PoppinsBold;
   color: var(--color-primary);
@@ -194,7 +194,8 @@ p {
 
 .main__info h2 {
   text-transform: none;
-  max-width: 500px;
+  font-size: 1.8rem;
+  max-width: 15em;
   margin-bottom: 1rem;
   font-family: PoppinsMedium;
   color: var(--color-secondary);
@@ -203,6 +204,7 @@ p {
 .main__info p {
   text-transform: none;
   line-height: 1.8;
+  font-size: 1rem;
   max-width: 25em;
   margin-bottom: 2px;
   font-family: PoppinsRegular;
@@ -321,13 +323,13 @@ p {
 @media screen and (min-width: 1200px) {
   .main__center {
     grid-template-columns: 2fr 1fr;
-    align-items: end;
-    padding-bottom: 12vh;
+    align-items: center;
+    padding-bottom: 6vh;
   }
 
   .main__info h1 {
     max-width: 100%;
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 
@@ -362,7 +364,7 @@ p {
 .sidebar {
   width: 90vw;
   height: 95vh;
-  max-width: var(--max-width);
+  max-width: var(--fixed-width);
   background-color: var(--color-white-smoke);
   border-radius: var(--radius);
   box-shadow: var(--dark-shadow);
@@ -420,6 +422,7 @@ p {
   position: absolute;
   top: 4rem;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
   display: none;
   padding: 2rem;
@@ -447,5 +450,35 @@ p {
 
 .submenu__center {
   display: grid;
-  gap: 0.25rem 2rem;
+  gap: 0.25rem 1rem;
+}
+
+.column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.column-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.submenu__heading {
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.submenu__center-links {
+  width: 8rem;
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-secondary);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+
+.submenu__center svg {
+  color: var(--color-primary);
+  margin-right: 0.8rem;
 }

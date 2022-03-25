@@ -5,7 +5,7 @@ const Main = () => {
   const { closeSubmenu } = useGlobalContext();
 
   return (
-    <section className="main__section">
+    <section className="main__section" onMouseOver={closeSubmenu}>
       <div className="main__center">
         <article className="main__info">
           <h1>Delicious</h1>
