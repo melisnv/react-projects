@@ -3,6 +3,7 @@
   --color-primary-light: #f3652da8;
 
   --color-secondary: #333333;
+  --color-tertiary: #4ca709;
   --color-white: #ffffff;
   --color-white-smoke: #f5f6f7;
   --color-black: #000000;
@@ -481,4 +482,137 @@ p {
 .submenu__center svg {
   color: var(--color-primary);
   margin-right: 0.8rem;
+}
+
+/* MENU COMPONENT */
+
+.menu__section {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 4rem;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .menu__section {
+    width: 95vw;
+  }
+}
+
+.menu__section-title h2 {
+  text-align: center;
+  font-family: PoppinsBold;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.menu__underline {
+  width: 10rem;
+  height: 0.3rem;
+  background: var(--color-secondary);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.menu__item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+
+.menu__item-photo {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.menu__item-info {
+  max-width: 10rem;
+}
+
+.menu__item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading__title {
+  color: var(--color-secondary);
+  font-family: PoppinsMedium;
+  margin-bottom: 0.5rem;
+}
+
+.heading__price {
+  color: var(--color-primary);
+  font-family: PoppinsBold;
+  margin-bottom: 0.5rem;
+}
+
+.item__description {
+  font-family: PoppinsRegular;
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+
+  .menu__item-photo {
+    height: 150px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__center {
+    width: 80vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu__item-photo {
+    height: 130px;
+    object-fit: contain;
+  }
+}
+
+/* MENU BUTTONS */
+
+.buttons_container {
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.category__button {
+  background: transparent;
+  border: transparent;
+  font-family: PoppinsRegular;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+
+.category__button:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
 }

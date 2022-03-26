@@ -3,6 +3,7 @@ import Navbar from './Main/Navbar';
 import Submenu from './Submenu';
 import Sidebar from './Main/Sidebar';
 import Main from './Main/Main';
+import MenuComponent from './Menu/MenuComponent';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Sidebar />
       <Main />
       <Submenu />
+      <MenuComponent />
     </>
   );
 }

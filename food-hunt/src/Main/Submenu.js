@@ -26,7 +26,6 @@ const Submenu = () => {
 
     submenu.style.left = `${center}px`;
     submenu.style.top = `${bottom}px`;
-    console.log(center, bottom);
   }, [location, links]); // everytime location changes we want to run this effect
 
   return (
