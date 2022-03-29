@@ -1,7 +1,10 @@
 :root {
   --color-white: #fefefe;
   --color-primary: #d2e0fd;
+  --color-primary-light: #859ed1;
   --color-primary-dark: #36385b;
+
+  --color-secondary: #a4002b;
 
   --transition: all 0.3s linear;
   --spacing: 0.3rem;
@@ -101,4 +104,88 @@ img {
 
 .nav__links a:hover {
   color: var(--color-primary);
+}
+
+/* ABOUT US PAGE */
+
+.section {
+  padding: 3rem 0;
+}
+
+.about__section {
+  width: var(--small-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-light);
+}
+
+.about__section-photo img {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 70%;
+  height: 70%;
+}
+
+.section__paragraph {
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  text-indent: 50px;
+}
+
+/* ERROR PAGE */
+
+.error__page {
+  display: flex;
+  justify-content: center;
+}
+
+.error__container {
+  text-align: center;
+}
+
+.error__container h1 {
+  text-transform: capitalize;
+  color: var(--color-primary-light);
+}
+
+.error__container-paragraph {
+  margin: 0 auto;
+  max-width: 50vw;
+}
+
+.error__container-paragraph h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.9px;
+}
+
+.btn__primary {
+  font-weight: 400;
+  background: transparent;
+  letter-spacing: 0.9px;
+  color: var(--color-primary-light);
+  border: 2px solid var(--color-primary-light);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: var(--transition);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  display: inline-block;
+}
+
+.btn__primary:hover {
+  border-color: transparent;
+  background: var(--color-primary-light);
+  color: var(--color-white);
 }
