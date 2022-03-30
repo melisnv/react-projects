@@ -170,6 +170,8 @@ img {
   letter-spacing: 0.9px;
 }
 
+/* BUTTONS */
+
 .btn__primary {
   font-weight: 400;
   background: transparent;
@@ -188,4 +190,83 @@ img {
   border-color: transparent;
   background: var(--color-primary-light);
   color: var(--color-white);
+}
+
+.btn__details {
+  padding: 0.25rem 0.4rem;
+}
+
+.btn__details:hover {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* COCKTAILS LIST */
+
+.cocktails__section {
+  padding: 5rem 0;
+}
+.cocktails__section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+}
+
+.cocktails__center {
+  width: var(--small-width);
+  margin: 0 auto;
+  max-width: var(--max-width);
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+@media screen and (min-width: 567px) {
+  .cocktails__center {
+    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+  }
+}
+
+/* COCKTAILS COMPONENT*/
+
+.cocktail {
+  background: var(--color-white);
+  margin-bottom: 2rem;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: var(--border-radius);
+}
+
+.cocktail:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.cocktail__img-container img {
+  height: 20rem;
+  object-fit: cover;
+  padding: 2rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.cocktail__footer {
+  padding: 1.5rem;
+}
+
+.cocktail__footer h3,
+.cocktail__footer h4,
+.cocktail__footer p {
+  margin-bottom: 0.3rem;
+}
+.cocktail__footer h3 {
+  font-size: 2rem;
+}
+.cocktail__footer p {
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5rem;
 }

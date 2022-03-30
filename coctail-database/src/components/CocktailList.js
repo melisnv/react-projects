@@ -12,13 +12,22 @@ const CocktailList = () => {
 
   if (cocktails.length < 1) {
     return (
-      <h2 className="section__title">
+      <h2 className="cocktails__section-title">
         No cocktails matched your search criteria!
       </h2>
     );
   }
 
-  return <h3>Cocktail List Component</h3>;
+  return (
+    <section className="section">
+      <h2 className="cocktails__section-title">cocktails</h2>
+      <div className="cocktails__center">
+        {cocktails.map((item) => {
+          return <Cocktails key={item.id} {...item} />;
+        })}
+      </div>
+    </section>
+  );
 };
 
 export default CocktailList;
