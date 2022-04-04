@@ -18,4 +18,4 @@ I practiced this project in order to test my knowledge about the information I l
 
 ### `available at`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://melisnurverir-fashionproject.netlify.app/](https://melisnurverir-fashionproject.netlify.app/) to view it in your browser.
