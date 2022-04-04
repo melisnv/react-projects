@@ -8,4 +8,4 @@ In this project search component was implemented with fetch data from CocktailDB
 
 ### `available at`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://melisnurverir-cocktaildatabaseproject.netlify.app/](https://melisnurverir-cocktaildatabaseproject.netlify.app/) to view it in your browser.
