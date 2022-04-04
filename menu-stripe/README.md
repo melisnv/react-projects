@@ -8,4 +8,4 @@ This project contains submenu component where it changes when the user mouse mov
 
 ### `available at`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://melisnurverir-luna-menuproject.netlify.app/](https://melisnurverir-luna-menuproject.netlify.app/) to view it in your browser.
