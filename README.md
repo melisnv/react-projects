@@ -139,3 +139,13 @@ This project contains submenu component where it changes when the user mouse mov
 ### `available at`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Cocktail App
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Drinks%2Faffogato.jpg?alt=media&token=022af88a-cde2-4539-b3f0-ff6d0a118a63)
+
+In this project search component was implemented with fetch data from CocktailDB API.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
