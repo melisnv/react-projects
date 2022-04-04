@@ -73,36 +73,36 @@ const SingleCocktail = () => {
     cocktail;
 
   return (
-    <section className="section single-cocktail__section">
+    <section className="section__single-cocktail single-cocktail__section">
       <Link to="/" className="btn btn__primary">
         Back
       </Link>
-      <h2 className="section__title">{name}</h2>
+      <h2 className="title__single-cocktail">{name}</h2>
       <div className="drink">
-        <img src={image} alt={name} />
+        <img className="drink__img" src={image} alt={name} />
         <div className="drink__info">
           <p>
-            <span className="drink__data">name : {name}</span>
+            <span className="drink__data">name : </span>
+            {name}
           </p>
           <p>
-            <span className="drink__data">category : {category}</span>
+            <span className="drink__data">category :</span> {category}
           </p>
           <p>
-            <span className="drink__data">info : {info}</span>
+            <span className="drink__data">info :</span> {info}
           </p>
           <p>
-            <span className="drink__data">glass : {glass}</span>
+            <span className="drink__data">glass : </span>
+            {glass}
           </p>
           <p>
-            <span className="drink__data">instructions : {instructions}</span>
+            <span className="drink__data">instructions :</span> {instructions}
           </p>
           <p>
-            <span className="drink__data">
-              ingredients :{' '}
-              {ingredients.map((item, index) => {
-                return item ? <span key={index}>{item}</span> : null;
-              })}
-            </span>
+            <span className="drink__data">ingredients :</span>
+            {ingredients.map((item, index) => {
+              return item ? <span key={index}>{item}</span> : null;
+            })}
           </p>
         </div>
       </div>

@@ -10,6 +10,7 @@ const AppProvider = ({ children }) => {
   const [cocktails, setCocktails] = useState([]);
 
   const fetchData = useCallback(async () => {
+    // only if searchTerm changes, create it from the scratch
     setLoading(true);
     try {
       const response = await fetch(`${url}${searchTerm}`);
