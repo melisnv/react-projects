@@ -142,7 +142,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Cocktail App
 
-![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Drinks%2Faffogato.jpg?alt=media&token=022af88a-cde2-4539-b3f0-ff6d0a118a63)
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Drinks%2Fmain_search_page.jpg?alt=media&token=8c778d46-0865-4367-ba59-b563127bf2e3)
 
 In this project search component was implemented with fetch data from CocktailDB API.
 
