@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { AppProvider } from './Main/context';
+import { SearchProvider } from './SearchMenu/contextSearch';
 
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <SearchProvider>
+        <App />
+      </SearchProvider>
     </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')

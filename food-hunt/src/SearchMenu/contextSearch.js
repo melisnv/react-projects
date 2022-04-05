@@ -4,7 +4,7 @@ const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
+const SearchProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [menu, setMenu] = useState([]);
   const [searchTerm, setSearchTerm] = useState('A');
@@ -35,4 +35,4 @@ export const useGlobalContext = () => {
   return useContext(AppContext);
 };
 
-export { AppContext, AppProvider };
+export { AppContext, SearchProvider };
