@@ -1,9 +1,10 @@
 import React from 'react';
 import Navbar from './Main/Navbar';
-import Submenu from './Submenu';
+import Submenu from './Main/Submenu';
 import Sidebar from './Main/Sidebar';
 import Main from './Main/Main';
 import MenuComponent from './Menu/MenuComponent';
+import SearchHome from './SearchMenu/pages/SearchHome';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Main />
       <Submenu />
       <MenuComponent />
+      <SearchHome />
     </>
   );
 }

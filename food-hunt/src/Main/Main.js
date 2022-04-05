@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGlobalContext } from './context';
+import { useGlobalContext } from '../Main/context';
 
 const Main = () => {
   const { closeSubmenu } = useGlobalContext();
