@@ -10,13 +10,32 @@ const SearchProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('A');
 
   const fetchData = async () => {
+    setLoading(true);
     try {
       const response = await fetch(`${url}${searchTerm}`);
       const data = await response.json();
       const { meals } = data;
-      console.log(meals);
+
+      if (meals) {
+        const newMeal = meals.map((meal) => {
+          const { idMeal, strMeal, strArea, strMealThumb, strTags } = meal;
+
+          return {
+            id: idMeal,
+            name: strMeal,
+            origin: strArea,
+            image: strMealThumb,
+            info: strTags,
+          };
+        });
+        setMenu(newMeal);
+      } else {
+        setMenu([]);
+      }
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
