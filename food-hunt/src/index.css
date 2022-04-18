@@ -6,12 +6,13 @@
   --color-tertiary: #4ca709;
   --color-white: #ffffff;
   --color-white-smoke: #f5f6f7;
+  --color-white-2: #ffffff71;
   --color-black: #000000;
 
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
-  --radius-2: 20px;
+  --radius-2: 3rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -138,8 +139,10 @@ p {
 }
 
 .btn {
-  font-size: 1rem;
-  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  width: 20%;
+  padding: 0.25rem;
+  text-align: start;
   border-radius: var(--radius);
   border-color: transparent;
   color: var(--color-secondary);
@@ -786,13 +789,18 @@ p {
 }
 
 .meals__footer {
-  padding: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .meals__footer h3,
 .meals__footer h4,
 .meals__footer p {
-  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .meals__footer h3 {
@@ -802,5 +810,101 @@ p {
 
 .meals__footer p {
   color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.meals__btn {
+  align-self: center;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  border-color: transparent;
+  color: var(--color-white);
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.meals__btn:hover {
+  color: var(--color-primary);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* SINGLE MEAL COMPONENT */
+
+.section__title {
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.section__singlemeal {
+  padding: 1rem 1rem;
+  margin: 1rem auto;
+  width: var(--min-width);
+  background-color: var(--color-white-smoke);
+  border-radius: var(--radius-2);
+  text-align: center;
+}
+
+.title__single-meal {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  color: var(--color-primary);
+}
+
+.meal {
+  width: var(--min-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  background: var(--color-white-2);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.meal__img {
+  border-radius: var(--radius-2);
+  width: 50%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.meal p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-secondary);
+}
+
+.meal__info {
+  text-align: left;
+  padding-top: 1rem;
+}
+
+.meal__data {
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+  background-color: var(--color-primary);
+  padding: 0.2rem;
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.not_highlight {
+  background-color: transparent;
+  margin-right: 0.5rem;
+  padding: 0.2rem;
 }

@@ -9,7 +9,10 @@ const Meals = ({ id, name, image, info, origin }) => {
         <div className="meals__footer">
           <h3>{name}</h3>
           <h4>{origin}</h4>
-          <p>{info}</p>
+          <Link to={`/meal/${id}`} className="btn">
+            {' '}
+            Details{' '}
+          </Link>
         </div>
       </div>
     </article>
