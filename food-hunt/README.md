@@ -8,4 +8,4 @@ In this project I practiced fetching data from themealdb. First database is for 
 
 ### `available at`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://melisnurverir-foodhuntproject.netlify.app/](https://melisnurverir-foodhuntproject.netlify.app/) to view the project in your browser.
