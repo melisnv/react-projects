@@ -10,8 +10,7 @@ const Meals = ({ id, name, image, info, origin }) => {
           <h3>{name}</h3>
           <h4>{origin}</h4>
           <Link to={`/meal/${id}`} className="btn">
-            {' '}
-            Details{' '}
+            Details
           </Link>
         </div>
       </div>

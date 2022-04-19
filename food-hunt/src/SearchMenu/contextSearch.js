@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
@@ -9,7 +9,7 @@ const SearchProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
   const [searchTerm, setSearchTerm] = useState('A');
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(`${url}${searchTerm}`);
@@ -37,11 +37,11 @@ const SearchProvider = ({ children }) => {
       console.log(error);
       setLoading(false);
     }
-  };
+  }, [searchTerm]);
 
   useEffect(() => {
     fetchData();
-  }, [searchTerm]);
+  }, [searchTerm, fetchData]);
 
   return (
     <AppContext.Provider value={{ loading, setSearchTerm, menu }}>

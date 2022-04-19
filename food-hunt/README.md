@@ -1,12 +1,11 @@
-# Getting Started with Create React App
+## Food Hunt Website
 
-This project was used nested data for navbar component.
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/FoodHunt%2Ffoodhunter1.jpg?alt=media&token=5cf394fb-3a68-42a0-b54e-98e7ec88ab22)
 
-## Available Scripts
+In this project I practiced fetching data from themealdb. First database is for displaying the meals according to the search term that the user enters and second database is for the details of a single meal fetching the data by selected meal's id. I applied navbar and submenu components.
 
-### `npm start`
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/FoodHunt%2Ffoodhunter2.jpg?alt=media&token=f2a1ffe7-d058-4649-bf62-004f987f1915)
 
-Runs the app in the development mode.\
+### `available at`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**

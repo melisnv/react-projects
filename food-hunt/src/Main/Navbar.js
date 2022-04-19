@@ -54,7 +54,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button className="btn btn__signin">
+        <button className="btn__signin">
           <img src={signin} alt="Sign In" />
         </button>
       </div>
