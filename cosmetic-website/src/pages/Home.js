@@ -1,11 +1,11 @@
 import Popular from '../components/Popular';
-import Lipstick from '../components/Lipstick';
+import BrandThisMonth from '../components/BrandThisMonth';
 
 const Home = () => {
   return (
     <div>
       <Popular />
-      <Lipstick />
+      <BrandThisMonth />
     </div>
   );
 };
