@@ -30,4 +30,5 @@ body {
   font-family: AvantGardeStd, AvantGardeBold, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 5rem 10rem;
 }

@@ -73,7 +73,7 @@ h3{
 
 const Card = styledComponents.div`
 min-height : 20rem; 
-min-width : 20rem; 
+min-width : 15rem; 
 border-radius: 2rem;
 overflow: hidden;
 position: relative;
