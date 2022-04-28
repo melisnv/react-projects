@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styledComponents from 'styled-components';
 
-const mostLovedUrl =
-  'https://makeup-api.herokuapp.com/api/v1/products.json?rating_greater_than=4.9';
+const url =
+  'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=';
 
-const Makeup = () => {
-  const [mostLovedMakeup, setMostLovedMakeup] = useState([]);
+const SearchResults = () => {
+  const [searchedItems, setSearchedItems] = useState([]);
+  let params = useParams();
 
-  const getMostLoved = async () => {
-    const response = await fetch(mostLovedUrl);
+  const getSearchedItem = async () => {
+    const response = await fetch(`${url}${params.search}`);
     const data = await response.json();
     console.log(data);
-    setMostLovedMakeup(data);
+    setSearchedItems(data);
   };
 
   useEffect(() => {
-    getMostLoved();
-  }, []);
+    getSearchedItem(params.search);
+  }, [params.search]);
 
   return (
     <Grid>
-      {mostLovedMakeup.map((item) => {
+      {searchedItems.map((item) => {
         return (
           <Card key={item.id}>
             <img src={item.image_link} alt={item.name} />
             <h4>{item.name}</h4>
+            <p>{item.price}€</p>
           </Card>
         );
       })}
@@ -67,6 +68,16 @@ h4{
   font-size: 1rem;
   margin: 0 auto;
   letter-spacing: 2px;
+}
+
+p{
+    text-align: center;
+    padding: 1rem;
+    text-align: center;
+    font-family: AvantGardeBold;
+    font-size: .8rem;
+    margin: 0 auto;
+    letter-spacing: 2px;
 }`;
 
-export default Makeup;
+export default SearchResults;
