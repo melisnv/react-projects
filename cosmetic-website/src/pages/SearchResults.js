@@ -12,7 +12,6 @@ const SearchResults = () => {
   const getSearchedItem = async () => {
     const response = await fetch(`${url}${params.search}`);
     const data = await response.json();
-    console.log(data);
     setSearchedItems(data);
   };
 
@@ -25,7 +24,7 @@ const SearchResults = () => {
       {searchedItems.map((item) => {
         return (
           <Card key={item.id}>
-            <img src={item.image_link} alt={item.name} />
+            <img src={item.api_featured_image} alt={item.name} />
             <h4>{item.name}</h4>
             <p>{item.price}€</p>
           </Card>

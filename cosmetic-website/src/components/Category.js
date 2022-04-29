@@ -13,7 +13,7 @@ const Category = () => {
       <StyledLink to={'/makeup/new'}>
         <h4>New</h4>
       </StyledLink>
-      <StyledLink to={'/makeup/brands'}>
+      <StyledLink to={'/brands'}>
         <h4>Brands</h4>
       </StyledLink>
     </List>

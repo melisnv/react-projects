@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styledComponents from 'styled-components';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { Link } from 'react-router-dom';
 
 const urlBrand =
   'http://makeup-api.herokuapp.com/api/v1/products.json?brand=benefit&product_type=lipstick';
@@ -48,8 +49,10 @@ const Popular = () => {
             return (
               <SplideSlide key={id}>
                 <Card>
-                  <img src={product.api_featured_image} alt={product.name} />
-                  <p>{product.name}</p>
+                  <StyledLink to={'/brands/' + product.brand}>
+                    <img src={product.api_featured_image} alt={product.name} />
+                    <p>{product.name}</p>
+                  </StyledLink>
                 </Card>
               </SplideSlide>
             );
@@ -59,6 +62,12 @@ const Popular = () => {
     </div>
   );
 };
+
+const StyledLink = styledComponents(Link)`
+text-decoration: none;
+color: black;
+cursor: pointer;
+`;
 
 const Wrapper = styledComponents.div`
 margin: 4rem 0rem;

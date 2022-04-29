@@ -1,32 +1,47 @@
-import styledComponents from 'styled-components';
-import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import styledComponents from 'styled-components';
+import banner from '../images/sephora-editors-picks-banner.jpg';
 
-const Search = () => {
-  const [input, setInput] = useState('');
+const SearchBrand = () => {
+  const [inputBrand, setInputBrand] = useState('');
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/searched/' + input);
+    navigate('/brands/' + inputBrand);
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
-      <div>
-        <FaSearch />
-        <input
-          onChange={(e) => setInput(e.target.value)}
-          type="text"
-          placeholder="Search for product types"
-          value={input}
-        />
-      </div>
-    </StyledForm>
+    <StyledBanner>
+      <img src={banner} alt="brand png" />
+      <StyledForm onSubmit={handleSubmit}>
+        <div>
+          <FaSearch />
+          <input
+            onChange={(e) => setInputBrand(e.target.value)}
+            type="text"
+            placeholder="Search for brands"
+            value={inputBrand}
+          />
+        </div>
+      </StyledForm>
+    </StyledBanner>
   );
 };
+
+const StyledBanner = styledComponents.div`
+
+margin: 0 auto;
+
+
+img{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+`;
 
 const StyledForm = styledComponents.form`
 margin: 0 auto;
@@ -69,4 +84,4 @@ svg{
 }
 `;
 
-export default Search;
+export default SearchBrand;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import styledComponents from 'styled-components';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Link } from 'react-router-dom';
 import '@splidejs/react-splide/css';
 
 const url =
@@ -52,10 +53,12 @@ const BrandThisMonth = () => {
             return (
               <SplideSlide key={id}>
                 <Card>
-                  <img src={product.api_featured_image} alt={product.name} />
-                  <h2>{product.category}</h2>
-                  <p>{product.name}</p>
-                  <h3>{product.price}€</h3>
+                  <StyledLink to={'/brands/' + product.brand}>
+                    <img src={product.api_featured_image} alt={product.name} />
+                    <h2>{product.category}</h2>
+                    <p>{product.name}</p>
+                    <h3>{product.price}€</h3>
+                  </StyledLink>
                 </Card>
               </SplideSlide>
             );
@@ -65,6 +68,12 @@ const BrandThisMonth = () => {
     </div>
   );
 };
+
+const StyledLink = styledComponents(Link)`
+text-decoration: none;
+color: black;
+cursor: pointer;
+`;
 
 const Wrapper = styledComponents.div`
 margin: 4rem 0rem;
