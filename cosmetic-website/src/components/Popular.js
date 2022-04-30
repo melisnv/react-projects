@@ -49,7 +49,7 @@ const Popular = () => {
             return (
               <SplideSlide key={id}>
                 <Card>
-                  <StyledLink to={'/brands/' + product.brand}>
+                  <StyledLink to={'/products/' + product.id}>
                     <img src={product.api_featured_image} alt={product.name} />
                     <p>{product.name}</p>
                   </StyledLink>

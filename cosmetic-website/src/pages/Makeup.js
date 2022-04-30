@@ -25,8 +25,10 @@ const Makeup = () => {
       {mostLovedMakeup.map((item) => {
         return (
           <Card key={item.id}>
-            <img src={item.image_link} alt={item.name} />
-            <h4>{item.name}</h4>
+            <StyledLink to={'/products/' + item.id}>
+              <img src={item.image_link} alt={item.name} />
+              <h4>{item.name}</h4>
+            </StyledLink>
           </Card>
         );
       })}
@@ -68,5 +70,12 @@ h4{
   margin: 0 auto;
   letter-spacing: 2px;
 }`;
+
+const StyledLink = styledComponents(Link)`
+text-decoration: none;
+color: black;
+cursor: pointer;
+text-align: center;
+`;
 
 export default Makeup;
