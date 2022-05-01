@@ -1,6 +1,8 @@
 import styledComponents from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+// TODO : Arrange categories and create and fetch data for them.
+
 const Category = () => {
   return (
     <List>
