@@ -4,6 +4,7 @@ import Search from '../components/Search';
 import Category from '../components/Category';
 import banner from '../images/sustainable-shampoo-banner.jpg';
 import styledComponents from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (

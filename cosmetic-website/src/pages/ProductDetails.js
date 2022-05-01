@@ -26,30 +26,41 @@ const ProductDetails = () => {
         <img src={details.api_featured_image} alt={details.name} />
       </div>
       <Info>
-        <Button
-          className={activeTab === 'description' ? 'active' : ''}
-          onClick={() => setActiveTab('description')}
-        >
-          Description
-        </Button>
-        <Button
-          className={activeTab === 'colors' ? 'active' : ''}
-          onClick={() => setActiveTab('colors')}
-        >
-          Colors
-        </Button>
-        <div>
-          <h3>{details.description}</h3>
-        </div>
+        <ButtonDiv>
+          <Button
+            className={activeTab === 'description' ? 'active' : ''}
+            onClick={() => setActiveTab('description')}
+          >
+            Description
+          </Button>
+          <Button
+            className={activeTab === 'colors' ? 'active' : ''}
+            onClick={() => setActiveTab('colors')}
+          >
+            Colors
+          </Button>
+        </ButtonDiv>
+        <StyledInformationDiv>
+          {activeTab === 'description' && (
+            <div>
+              <h3>{details.description}</h3>
+            </div>
+          )}
+          {activeTab === 'colors' && (
+            <ul>
+              {details.product_colors?.map(({ hex_value, colour_name }) => (
+                <li key={hex_value}>{colour_name}</li>
+              ))}
+            </ul>
+          )}
+        </StyledInformationDiv>
       </Info>
     </DetailWrapper>
   );
 };
 
 const DetailWrapper = styledComponents.div`
-max-width: 1170px;;
-margin-top: 5rem;
-margin-bottom: 5rem;
+max-width: 1170px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -75,23 +86,22 @@ h2 {
 }
 
 h3 {
-    max-width: 25rem;
     text-align:center;
     margin-top: 2rem;
     font-family: AvantGardeStd;
     letter-spacing: 1px;
     font-size: 1rem;
     font-weight: 300;
+    min-width: 100%;
 }
 
-li{
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-}
+`;
 
-ul{
-    margin-top: 2rem;
-}
+const ButtonDiv = styledComponents.div`
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 2rem;
 `;
 
 const Button = styledComponents.button`
@@ -104,12 +114,29 @@ font-weight: 600;
 cursor: pointer;
 `;
 
+const StyledInformationDiv = styledComponents.div`
+
+li{
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+ul{
+    text-decoration: none;
+    margin: 2rem;
+    text-align: center;
+    font-family: AvantGardeStd;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 300;
+    list-style: none;
+}
+`;
+
 const Info = styledComponents.div`
-margin-left: 3rem;
-margin-top: 5rem;
+margin: 2rem auto;
+min-height: 40vw;
 max-width: 30vw;
-
-
 
 `;
 
