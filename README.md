@@ -160,6 +160,16 @@ In this project I practiced fetching data from themealdb. First database is for 
 
 Open [https://melisnurverir-foodhuntproject.netlify.app/](https://melisnurverir-foodhuntproject.netlify.app/) to view the project in your browser.
 
+## Cosmetic Website (Sephora Inspired)
+
+![Main Page](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2Fsephora-cosmetic%2Fsephora1.jpg?alt=media&token=e76baf3e-f348-46cf-93d8-10f701f1023e)
+
+In this project data is fetched from ![Makeup API](http://makeup-api.herokuapp.com/) and brand search, item details datas are fetched seperately. This project's inspiration was Sephora's website.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 ## Travel Advice Website
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2F2.jpg?alt=media&token=81ffb478-4c69-43c4-a964-8146f8cb8f35)
