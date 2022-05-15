@@ -2,7 +2,7 @@
 
 ![Main Page](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2Fsephora-cosmetic%2Fsephora1.jpg?alt=media&token=e76baf3e-f348-46cf-93d8-10f701f1023e)
 
-In this project data is fetched from ![Makeup API](http://makeup-api.herokuapp.com/) and brand search, item details datas are fetched seperately. This project's inspiration was Sephora's website.
+In this project data is fetched from [Makeup API](http://makeup-api.herokuapp.com/) and brand search, item details datas are fetched seperately. This project's inspiration was Sephora's website.
 
 ![Card Component](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2Fsephora-cosmetic%2Fsephora2.jpg?alt=media&token=f86a56fb-0083-42b6-ab2f-7064250fd21a)
 
