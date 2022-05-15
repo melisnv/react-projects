@@ -5,6 +5,7 @@ import Home from './components/pages/Home';
 import Tours from './components/pages/Tours';
 import SignUp from './components/pages/SignUp';
 import Sightseeing from './components/pages/Sightseeing';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/sightseeing" exact element={<Sightseeing />} />
           <Route path="/signup" exact element={<SignUp />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
