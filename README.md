@@ -159,3 +159,13 @@ In this project I practiced fetching data from themealdb. First database is for 
 ### `available at`
 
 Open [https://melisnurverir-foodhuntproject.netlify.app/](https://melisnurverir-foodhuntproject.netlify.app/) to view the project in your browser.
+
+## Travel Advice Website
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2F2.jpg?alt=media&token=81ffb478-4c69-43c4-a964-8146f8cb8f35)
+
+A simple travel planner/advisor responsive website with react router and card component.
+
+### `available at`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
