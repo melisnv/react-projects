@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import Photo from './Photo';
+
+const clientID = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`;
+
+const mainURL = 'https://api.unsplash.com/photos/';
+const searchURL = 'https://api.unsplash.com/search/photos/';
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  const [photos, setPhotos] = useState([]);
+
+  const fetchImages = async () => {
+    setLoading(true);
+    let url;
+    url = `${mainURL}${clientID}`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setPhotos(data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <section className="search">
+        <form className=" search-form">
+          <input type="text" placeholder="search" className="form-input" />
+          <button type="submit" className="submit-btn" onClick={handleSubmit}>
+            <FaSearch />
+          </button>
+        </form>
+      </section>
+      <section className="photos">
+        <div className="photos-center">
+          {photos.map((image, index) => {
+            return <Photo key={image.id} {...image} />;
+          })}
+        </div>
+        {loading && <h2 className="loading">Loading...</h2>}
+      </section>
+    </main>
   );
 }
 
