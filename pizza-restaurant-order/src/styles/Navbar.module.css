@@ -12,10 +12,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Italiana";
+  src: url("/font/ItalianaRegular.ttf");
+}
+
+
 .container{
     height: 100px;
     padding: 0px 50px;
-    background-color: #dbd1c2;
+    background-color: #f2efe5;
 
     display: flex;
     align-items: center;
@@ -24,40 +30,20 @@
     position: sticky;
     top: 0;
 
-    font-family: "Feijoa", sans-serif;
+    font-family: "Italiana", sans-serif !important;
 }
 
-.item{
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.item:nth-child(2){
-    flex: 3;
-}
-
-.item:last-child(){
-    justify-content: flex-end;
-}
-
-.callButton{
-    background-color: #ffff;
-    padding: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
 
 .texts{
     margin-left: 20px;
-    color: #ffff;
+    color: #201817;
 }
 
 .text:first-child{
     font-size: 12px;
     font-weight: 500;
 }
+
 .text:last-child{
     font-size: 20px;
     font-weight: bold;
@@ -68,8 +54,9 @@
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
-    color: #fff;
+    color: #201817;
 }
 
 .listItem{
@@ -77,9 +64,14 @@
     font-weight: bold;
 }
 
+.logo{
+    margin: 20px;
+}
+
 .cart{
     position: relative;
 }
+
 
 .counter{
     position: absolute;
