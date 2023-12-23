@@ -2,61 +2,138 @@ import React from "react";
 import ReactDOM  from "react-dom/client";
 import '../src/index.css'
 
+const books = [
+  {
+    id: 1,
+    img: './images/book1.jpg',
+    author: 'Jordan Moore',
+    title: 'Interesting Facts For Curious Minds',
+  },
+  {
+    id: 2,
+    img: './images/book2.jpg',
+    author: 'Rebecca Yarros',
+    title: 'Fourth Wing (The Empyrean, 1)',
+  },
+  {
+    id: 3,
+    img: './images/book3.jpg',
+    author: 'James Clear',
+    title:
+      'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
+  },
+  {
+    id: 4,
+    img: './images/book4.jpg',
+    author: 'M Prefontaine',
+    title: 'Difficult Riddles For Smart Kids: 300 Difficult',
+  },
+  {
+    id: 5,
+    img: './images/book5.jpg',
+    author: 'James McBride',
+    title: 'The Heaven & Earth Grocery Store',
+  },
+  {
+    id: 6,
+    img: './images/book6.jpg',
+    author: 'Bonnie Garmus',
+    title: 'Lessons in Chemistry: A Novel',
+  },
+];
+
+// const EventExamples = () => {
+//   return (<section>
+//     <form>
+//       <h2>Typical Form</h2>
+//       <input type="text" name="example" style={{margin:'1rem 0'}}></input>
+//     </form>
+//     <button onClick={() => console.log("The button is clicked!")} type="button">Click Me</button>
+//   </section>)
+// };
+
+
 const BookList = () => {
+  // Function to fetch the book
+  const FindtheBook = (id) => {
+    const book = books.find((book) =>book.id === id);
+    console.log(book)
+  };
+
   return (
     <section>
       <h1 className="heading">Amazon Best Sellers</h1>
       <div className="booklist">
-        <Book
-          img="./images/book1.jpg"
-          author="Jordan Moore"
-          title="Interesting Facts For Curious Minds"
-        />
-        <Book
-          img="./images/book2.jpg"
-          author="Rebecca Yarros"
-          title="Fourth Wing (The Empyrean, 1)"
-        />
-        <Book
-          img="./images/book3.jpg"
-          author="James Clear"
-          title="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"
-        />
-        <Book
-          img="./images/book4.jpg"
-          author="M Prefontaine"
-          title="Difficult Riddles For Smart Kids: 300 Difficult"
-        />
-        <Book
-          img="./images/book5.jpg"
-          author="James McBride"
-          title="The Heaven & Earth Grocery Store"
-        />
-        <Book
-          img="./images/book6.jpg"
-          author="Bonnie Garmus"
-          title="Lessons in Chemistry: A Novel"
-        />
+        {books.map((book) => {
+          // destructure
+          return <Book {...book} key={book.id} FindtheBook={FindtheBook} />;
+          // return <Book {...book} key={book.id} />; // Alternative
+        })}
       </div>
     </section>
   );
 }
 
-const img = './images/book1.jpg';
-const author = 'Jordan Moore';
-const title = 'Interesting Facts For Curious Minds';
-
 
 const Book = (props) => {
-  // const {img, title, author} = props;
+  const { id, img, author, title, FindtheBook } = props;
+  const getSingleBook = ()=> {
+    FindtheBook(id);
+  }
   return (
     <article className="book">
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h3>{props.author}</h3>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <button onClick={getSingleBook}>Click Me</button>
+      <h3>{author}</h3>
     </article>
   );
 };
+
+// const BookList = () => {
+//   return (
+//     <section>
+//       <h1 className="heading">Amazon Best Sellers</h1>
+//       <div className="booklist">
+//         <Book
+//           img="./images/book1.jpg"
+//           author="Jordan Moore"
+//           title="Interesting Facts For Curious Minds"
+//         />
+//         <Book
+//           img="./images/book2.jpg"
+//           author="Rebecca Yarros"
+//           title="Fourth Wing (The Empyrean, 1)"
+//         />
+//         <Book
+//           img="./images/book3.jpg"
+//           author="James Clear"
+//           title="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"
+//         />
+//         <Book
+//           img="./images/book4.jpg"
+//           author="M Prefontaine"
+//           title="Difficult Riddles For Smart Kids: 300 Difficult"
+//         />
+//         <Book
+//           img="./images/book5.jpg"
+//           author="James McBride"
+//           title="The Heaven & Earth Grocery Store"
+//         />
+//         <Book
+//           img="./images/book6.jpg"
+//           author="Bonnie Garmus"
+//           title="Lessons in Chemistry: A Novel"
+//         />
+//       </div>
+//     </section>
+//   );
+// }
+
+// const img = './images/book1.jpg';
+// const author = 'Jordan Moore';
+// const title = 'Interesting Facts For Curious Minds';
+
 
 // const Book = () => {
 //   return (
