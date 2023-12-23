@@ -1,46 +1,8 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
 import '../src/index.css'
-
-const books = [
-  {
-    id: 1,
-    img: './images/book1.jpg',
-    author: 'Jordan Moore',
-    title: 'Interesting Facts For Curious Minds',
-  },
-  {
-    id: 2,
-    img: './images/book2.jpg',
-    author: 'Rebecca Yarros',
-    title: 'Fourth Wing (The Empyrean, 1)',
-  },
-  {
-    id: 3,
-    img: './images/book3.jpg',
-    author: 'James Clear',
-    title:
-      'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
-  },
-  {
-    id: 4,
-    img: './images/book4.jpg',
-    author: 'M Prefontaine',
-    title: 'Difficult Riddles For Smart Kids: 300 Difficult',
-  },
-  {
-    id: 5,
-    img: './images/book5.jpg',
-    author: 'James McBride',
-    title: 'The Heaven & Earth Grocery Store',
-  },
-  {
-    id: 6,
-    img: './images/book6.jpg',
-    author: 'Bonnie Garmus',
-    title: 'Lessons in Chemistry: A Novel',
-  },
-];
+import { books } from "./books-data";
+import Book from "./Book";
 
 // const EventExamples = () => {
 //   return (<section>
@@ -55,18 +17,18 @@ const books = [
 
 const BookList = () => {
   // Function to fetch the book
-  const FindtheBook = (id) => {
-    const book = books.find((book) =>book.id === id);
-    console.log(book)
-  };
+  // const FindtheBook = (id) => {
+  //   const book = books.find((book) =>book.id === id);
+  //   console.log(book)
+  // };
 
   return (
     <section>
       <h1 className="heading">Amazon Best Sellers</h1>
       <div className="booklist">
-        {books.map((book) => {
+        {books.map((book,index) => {
           // destructure
-          return <Book {...book} key={book.id} FindtheBook={FindtheBook} />;
+          return <Book {...book} key={book.id} number ={index}/>;
           // return <Book {...book} key={book.id} />; // Alternative
         })}
       </div>
@@ -74,21 +36,6 @@ const BookList = () => {
   );
 }
 
-
-const Book = (props) => {
-  const { id, img, author, title, FindtheBook } = props;
-  const getSingleBook = ()=> {
-    FindtheBook(id);
-  }
-  return (
-    <article className="book">
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
-      <button onClick={getSingleBook}>Click Me</button>
-      <h3>{author}</h3>
-    </article>
-  );
-};
 
 // const BookList = () => {
 //   return (
