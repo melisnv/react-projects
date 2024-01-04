@@ -12,19 +12,11 @@ This project was built with the aim of learning usage of useState.
 
 This project was built with the aim of learning fetching data with useEffect() and useState().
 
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 ## Tours Page
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/tours_screen.jpg?alt=media&token=dabba049-9596-4a42-9968-45780d8c1a0f)
 
 In this project useEffect() and useState() were used and have been practiced.
-
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Reviews Page
 
@@ -32,19 +24,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 This project was built with the aim of learning fetching data with useEffect() and useState().
 
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 ## Frequently Asked Questions and Answers
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/questions_answer_screen.jpg?alt=media&token=d3ac1332-0ca5-4dcd-b620-6839424a2ee4)
 
 In this project toggle logic has used.
-
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Menu Component
 
@@ -58,19 +42,11 @@ In this project buttons can render the menu for the choosen category by the user
 
 This project contains small data to display as the user select the company in the resume.
 
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 ## Profile Review Slider
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/profile_slider%2Fprofile_slider_screen.gif?alt=media&token=53c0f06c-9f4f-4050-a6d0-ae1f26ecb31b)
 
 In this project slider logic was implemented with useState() and useEffect().
-
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Zara Website Trends Component
 
@@ -88,19 +64,11 @@ Open [https://melisnurverir-fashionproject.netlify.app/](https://melisnurverir-f
 
 In this project a the amount of paragraph selected by user generated and form component implemented.
 
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 ## Color Generator
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/color_generator_screen2.jpg?alt=media&token=f7ad363a-5255-4f96-ae63-00e1ffe776f8)
 
 This project generates shades and tints of the color entered by user as an input. When the color clicked, the hex code copied the clipboard.
-
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Color Values Used From
 
@@ -112,10 +80,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 In this project data is persisted with LocalStorage.
 
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 # Navbar Component
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2Fing_navbar.jpg?alt=media&token=c90480ac-2956-4344-8c5e-636dc21601d9)
@@ -123,10 +87,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 In this project useRef,useState and useEffect is used to design a navbar.
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2Fing_navbar_gif.gif?alt=media&token=a320f494-8763-493c-94d3-940ce47fb0b6)
-
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Luna | Submenu Component
 
@@ -166,19 +126,11 @@ Open [https://melisnurverir-foodhuntproject.netlify.app/](https://melisnurverir-
 
 In this project data is fetched from [Makeup API](http://makeup-api.herokuapp.com/) and brand search, item details datas are fetched seperately. This project's inspiration was Sephora's website.
 
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 ## Travel Advice Website
 
 ![Card Component](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2F2.jpg?alt=media&token=7e4b7ac4-653e-46b1-ae69-3f3f0fde42f6)
 
 A simple travel planner/advisor responsive website with react router and card component.
-
-### `available at`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Random Users
 
@@ -186,14 +138,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 This project was built with the aim of learning usage of fetching a nested data.
 
-### `available at`
-
 ## GitHub Pagination Component
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/Project%20Screens%2Fgithub-pagination.png?alt=media&token=597dbd64-8b35-47fb-802e-f84b7f86fc95)
 
 This project was built with the aim of learning fetching data with custom useFetch() function as well as useEffect() and useState().
 
+## Travel Inn
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/birthday-react-6eca4.appspot.com/o/travelinn.png?alt=media&token=5512df89-74e5-422c-ab4f-aa07bc0ee555)
+
 ### `available at`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [inn-travel.netlify.app](https://inn-travel.netlify.app/) to view it in your browser.
