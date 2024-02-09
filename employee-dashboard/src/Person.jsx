@@ -1,10 +1,18 @@
 import { useNavigate } from 'react-router-dom';
 
-const Person = ({ image, name, department, salary }) => {
+const Person = ({ image, name, department, salary, performanceRating, projectsCompleted, trainingHours }) => {
   const navigate = useNavigate();
 
   const handlePerformanceClick = () => {
-    navigate('/performance');
+    navigate('/performance', {
+      state: {
+        name,
+        department,
+        performanceRating,
+        projectsCompleted,
+        trainingHours,
+      },
+    });
   };
 
   return (

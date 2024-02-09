@@ -19,14 +19,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        {' '}
-        {/* Use Routes instead of Switch */}
         <Route
           path="/"
           element={
             <main>
-              {' '}
-              {/* Use element instead of component */}
               <section className="container">
                 <h1 className="main-title">Employee Dashboard</h1>
                 <List people={people} />
@@ -45,8 +41,7 @@ function App() {
             </main>
           }
         />
-        <Route path="/performance" element={<Performance />} />{' '}
-        {/* Use element instead of component */}
+        <Route path="/performance" element={<Performance />} />
       </Routes>
     </Router>
   );

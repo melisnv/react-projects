@@ -399,3 +399,17 @@ main {
 .employees-row{
   margin-bottom: 1rem;
 }
+
+.performance-title{
+  font-weight: bold;
+  color: #252d37;
+  margin-bottom: 1rem;
+}
+
+progress::-webkit-progress-bar {background-color: lightgrey; width: 100%;}
+progress {background-color: black;}
+
+/* value: */
+progress::-webkit-progress-value {background-color: pink !important;}
+progress::-moz-progress-bar {background-color: pink !important;}
+progress {color: pink;}
