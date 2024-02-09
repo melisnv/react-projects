@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { PieChart, Pie } from 'recharts';
+import { PieChart, Pie, Sector, Cell, Tooltip } from 'recharts';
 
 
 const Performance = () => {
@@ -10,14 +10,15 @@ const Performance = () => {
      performanceRating,
      projectsCompleted,
      trainingHours,
+     training,
    } = state;
 
-   const data = [
-     { name: 'Geeksforgeeks', students: 400 },
-     { name: 'Technical scripter', students: 700 },
-     { name: 'Geek-i-knack', students: 200 },
-     { name: 'Geek-o-mania', students: 1000 },
-   ];
+   const pieChartData = training.map((item,index)=>({
+    name: item.name,
+    value: item.hours
+  }))
+
+  const COLORS = ['#3D2B1F', '#B8AD9E', '#410200', '#8D7D77', '#C3B091'];
 
   return (
     <main>
@@ -29,19 +30,46 @@ const Performance = () => {
           <p>{projectsCompleted}</p>
           <p>{trainingHours}</p>
         </div>
+        <br></br>
+        <br></br>
 
         <div>
-          <progress value={75} max={100} />
+          {training.map((item, index) => (
+            <p key={index}>
+              {item.name}: {item.hours} hours
+            </p>
+          ))}
         </div>
 
+        <br></br>
+        <br></br>
+
         <div>
+          <progress value={performanceRating} max={10} />
+        </div>
+
+        <div className="piechart-container">
           <PieChart width={600} height={700}>
             <Pie
-              data={data}
-              dataKey="students"
-              outerRadius={250}
+              data={pieChartData}
+              dataKey="value"
+              isAnimationActive={true}
               fill="lightblue"
-            />
+              cx="50%"
+              cy="50%"
+              startAngle={180}
+              endAngle={0}
+              outerRadius={100}
+              label
+            >
+              {pieChartData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+            <Tooltip />
           </PieChart>
         </div>
       </section>

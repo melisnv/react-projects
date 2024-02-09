@@ -409,7 +409,14 @@ main {
 progress::-webkit-progress-bar {background-color: lightgrey; width: 100%;}
 progress {background-color: black;}
 
-/* value: */
 progress::-webkit-progress-value {background-color: pink !important;}
 progress::-moz-progress-bar {background-color: pink !important;}
 progress {color: pink;}
+
+
+.piechart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}

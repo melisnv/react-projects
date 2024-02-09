@@ -1,6 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 
-const Person = ({ image, name, department, salary, performanceRating, projectsCompleted, trainingHours }) => {
+const Person = ({
+  image,
+  name,
+  department,
+  salary,
+  performanceRating,
+  projectsCompleted,
+  trainingHours,
+  training,
+}) => {
   const navigate = useNavigate();
 
   const handlePerformanceClick = () => {
@@ -11,6 +20,7 @@ const Person = ({ image, name, department, salary, performanceRating, projectsCo
         performanceRating,
         projectsCompleted,
         trainingHours,
+        training,
       },
     });
   };
