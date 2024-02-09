@@ -8,6 +8,8 @@ const Person = ({
   performanceRating,
   projectsCompleted,
   trainingHours,
+  unapprovedLeave,
+  absences,
   training,
 }) => {
   const navigate = useNavigate();
@@ -20,6 +22,8 @@ const Person = ({
         performanceRating,
         projectsCompleted,
         trainingHours,
+        unapprovedLeave,
+        absences,
         training,
       },
     });

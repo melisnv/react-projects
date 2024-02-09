@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { PieChart, Pie, Sector, Cell, Tooltip } from 'recharts';
 
 
+
 const Performance = () => {
   const { state } = useLocation();
    const {
@@ -10,6 +11,8 @@ const Performance = () => {
      performanceRating,
      projectsCompleted,
      trainingHours,
+     unapprovedLeave,
+     absences,
      training,
    } = state;
 
@@ -23,30 +26,45 @@ const Performance = () => {
   return (
     <main>
       <section className="container">
-        <div>
+        <div className="about-employee">
           <h2 className="performance-title">{name}</h2>
-          <h4>{department}</h4>
-          <p>{performanceRating}</p>
+          <h4 className="department-title">{department}</h4>
+          {/* <p>{performanceRating}</p>
           <p>{projectsCompleted}</p>
-          <p>{trainingHours}</p>
+          <p>{trainingHours}</p> */}
         </div>
-        <br></br>
-        <br></br>
 
-        <div>
+        <div className="row absence-employee">
+          <div className="column-absence leave-employee">
+            <h5 className="absence-title">Unapproved Leave</h5>
+            <p className="leave-txt">{unapprovedLeave}</p>
+          </div>
+          <div className="column-absence absent-employee">
+            <h5 className="absence-title">Absences</h5>
+            <p className="absence-txt">{absences}</p>
+          </div>
+        </div>
+
+        {/* <div>
           {training.map((item, index) => (
             <p key={index}>
               {item.name}: {item.hours} hours
             </p>
           ))}
-        </div>
+        </div> */}
 
-        <br></br>
-        <br></br>
+        <br />
+        <br />
 
         <div>
           <progress value={performanceRating} max={10} />
         </div>
+
+        <br />
+        <br />
+
+        <br />
+        <br />
 
         <div className="piechart-container">
           <PieChart width={600} height={700}>
